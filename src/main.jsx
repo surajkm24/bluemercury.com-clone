@@ -8,9 +8,7 @@ import './index.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <ChakraProvider>
-        <App />
-      </ChakraProvider>
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 )
