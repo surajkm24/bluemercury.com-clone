@@ -6,6 +6,7 @@ import { HeaderCarousel } from './components/HeaderCarousel';
 import { NewArrivals } from './components/NewArrivals';
 import { GlowyMakeup } from './components/GlowyMakeup';
 import { BestSellers } from './components/BestSellers';
+import { NewProductNest } from './components/NewProductNest';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
         <Navbar/>
         <HeaderCarousel/>
         <NewArrivals/>
+        <NewProductNest/>
         <BestSellers/>
         <GlowyMakeup/>
       </ChakraProvider>
