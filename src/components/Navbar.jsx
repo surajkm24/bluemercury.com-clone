@@ -62,7 +62,7 @@ export const Navbar = () => {
                 <Box width='150px' display={showLogo ? 'block' : 'none'}>
                     <Image width='100%' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
                 </Box>
-                <Flex justifyContent='center' gap={showLogo ? '0.7vw' : 9} alignItems='center' cursor='pointer'>
+                <Flex justifyContent='center' gap={showLogo ?[null,null,null,'1.2vw','2.5vw'] : 9} alignItems='center' cursor='pointer'>
                     <Popover trigger='hover'>
                         <PopoverTrigger>
                             <Text _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='500' width={showLogo?'fit-content':null}>SHOP</Text>

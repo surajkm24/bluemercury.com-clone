@@ -6,7 +6,7 @@ import data from '../data/glowyMakeupData.json';
 
 export const GlowyMakeup = () => {
 
-    return <div style={{ marginTop: "45px",marginBottom:"30px" }}>
+    return <div style={{ marginTop: "45px" }}>
         <Heading textAlign='center' fontSize='28px' color='#12284C' fontWeight={200} letterSpacing='2px' fontFamily='Montserrat Light,sans-serif'>DEWY, GLOWY MAKEUP</Heading>
         <Show above='1024px'>
             <div style={{ width: "90vw", margin: "50px auto 0px" }}>
