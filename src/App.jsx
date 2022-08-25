@@ -7,6 +7,7 @@ import { NewArrivals } from './components/NewArrivals';
 import { GlowyMakeup } from './components/GlowyMakeup';
 import { BestSellers } from './components/BestSellers';
 import { NewProductNest } from './components/NewProductNest';
+import { TreatMentAndSerums } from './components/TreatmentAndSerums';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,7 @@ function App() {
         <NewArrivals/>
         <NewProductNest/>
         <BestSellers/>
+        <TreatMentAndSerums/>
         <GlowyMakeup/>
       </ChakraProvider>
     </div>
