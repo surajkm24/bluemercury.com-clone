@@ -4,6 +4,8 @@ import { Navbar } from './components/Navbar';
 import {ChakraProvider} from '@chakra-ui/react';
 import { HeaderCarousel } from './components/HeaderCarousel';
 import { NewArrivals } from './components/NewArrivals';
+import { GlowyMakeup } from './components/GlowyMakeup';
+import { BestSellers } from './components/BestSellers';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +16,8 @@ function App() {
         <Navbar/>
         <HeaderCarousel/>
         <NewArrivals/>
+        <BestSellers/>
+        <GlowyMakeup/>
       </ChakraProvider>
     </div>
   )
