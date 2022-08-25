@@ -2002,7 +2002,7 @@ export const Navbar = () => {
             </Flex>
             <Flex p='10px 10px 20px 10px'>
                 <Input _placeholder={{fontFamily:"sans-serif",letterSpacing:"1px",fontWeight:"450",color:"#12284c",opacity:"0.8"}} fontSize='16px' variant='unstyled' placeholder='SEARCH...'/>
-                <SearchIcon boxSize='22px'/>
+                <SearchIcon boxSize='22px' cursor='pointer'/>
             </Flex>
         </Hide>
     </>

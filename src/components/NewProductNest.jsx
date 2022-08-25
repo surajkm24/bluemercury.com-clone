@@ -23,7 +23,7 @@ export const NewProductNest = () => {
     const {isOpen,onOpen,onClose} = useDisclosure()
 
     return <Box bg='#dad0dc' py={['15px', '20px', '25px', '30px', '45px']} >
-        <Heading textAlign='center' fontSize='28px' color='#12284C' fontWeight={200} letterSpacing='2px' fontFamily='Montserrat Light,sans-serif'>NEW! FROM NEST NEW YORK</Heading>
+        <Heading cursor='pointer' textAlign='center' fontSize='28px' color='#12284C' fontWeight={200} letterSpacing='2px' fontFamily='Montserrat Light,sans-serif'>NEW! FROM NEST NEW YORK</Heading>
         <Text textAlign='center' px={['4%', '7%', '13.5%', '21.5%', '23%']} fontWeight='350' mt='15px' color='#12284C'>This fall candle captures the sweet, woody aroma of freshly fallen autumn leaves with wild plum and cinnamon wrapped in the warmth of patchouli leaf and cashmere wood.</Text>
         <Show above='768px'>
             <Flex mt='20px' mb='35px' justifyContent='space-between' px={[null, null, '14%', '20%']}>
