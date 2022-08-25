@@ -4,7 +4,7 @@ export const NewBrand = () => {
 
     return <>
         <Show above='768px'>
-            <Flex justifyContent={'space-between'} px='3%' mt='20px' alignItems='center'>
+            <Flex justifyContent={'space-between'} px='3%' mt='30px' alignItems='center'>
                 <Box width='48%' cursor='pointer'>
                     <Image width='100%' height='37vw' objectFit={'cover'} src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/zitsticka_coop_x650.jpg?v=1660762100' alt='' />
                 </Box>

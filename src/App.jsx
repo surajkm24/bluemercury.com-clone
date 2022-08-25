@@ -10,6 +10,7 @@ import { NewProductNest } from './components/NewProductNest';
 import { TreatMentAndSerums } from './components/TreatmentAndSerums';
 import { NewBrand } from './components/NewBrand';
 import { OffersAndServices } from './components/OffersAndServices';
+import { Footer } from './components/Footer';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,6 +27,7 @@ function App() {
         <GlowyMakeup/>
         <NewBrand/>
         <OffersAndServices/>
+        <Footer/>
       </ChakraProvider>
     </div>
   )

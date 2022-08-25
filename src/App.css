@@ -4,3 +4,14 @@ body{
   overflow-x:hidden;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+::-webkit-scrollbar{
+  width:10px
+};
+
+::-webkit-scrollbar-track{
+  background:rgb(244, 238, 238)
+}
+::-webkit-scrollbar-thumb{
+  background-color:#13305e;
+  border-radius:10px
+}
