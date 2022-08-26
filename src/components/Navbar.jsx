@@ -1,5 +1,5 @@
 import { SearchIcon } from '@chakra-ui/icons';
-import {InputGroup,Input,InputRightElement, Flex, useDisclosure, Show, Hide, Spacer, Box, Text, Button, Icon, Tooltip, Popover, PopoverArrow, PopoverTrigger, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, Image } from '@chakra-ui/react';
+import { InputGroup, Input, InputRightElement, Flex, useDisclosure, Show, Hide, Spacer, Box, Text, Button, Icon, Tooltip, Popover, PopoverArrow, PopoverTrigger, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, Image } from '@chakra-ui/react';
 import { AiFillExclamationCircle, AiOutlineHeart } from 'react-icons/ai';
 import { CgProfile } from 'react-icons/cg';
 import { BiShoppingBag } from 'react-icons/bi';
@@ -21,6 +21,7 @@ import { FreeGifts } from './NavComponents/FreeGifts';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, } from '@chakra-ui/react'
 import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, } from '@chakra-ui/react'
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
     const [count, setCount] = useState(1);
@@ -45,7 +46,9 @@ export const Navbar = () => {
                         <Button leftIcon={<SearchIcon boxSize='20px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'>SEARCH</Button>
                     </Tooltip>
                     <Tooltip label='Account'>
-                        <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'>SIGN IN/UP</Button>
+                        <Link to='/account/login'>
+                            <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'>SIGN IN/UP</Button>
+                        </Link>
                     </Tooltip>
                     <Tooltip label='Bag'>
                         <Button leftIcon={<Icon as={BiShoppingBag} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'>BAG</Button>
@@ -58,14 +61,14 @@ export const Navbar = () => {
                 <img width='200px' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
                 <Spacer />
             </Flex>
-            <Flex ref={myRef} justifyContent={showLogo ? 'space-between' : 'center'}  mt='10px' position='sticky' top='0px' bg='white' alignItems='center' p='5px 0px 5px 15px' zIndex={2}>
+            <Flex ref={myRef} justifyContent={showLogo ? 'space-between' : 'center'} mt='10px' position='sticky' top='0px' bg='white' alignItems='center' p='5px 0px 5px 15px' zIndex={2}>
                 <Box width='150px' display={showLogo ? 'block' : 'none'}>
                     <Image width='100%' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
                 </Box>
-                <Flex justifyContent='center' gap={showLogo ?[null,null,null,'1.2vw','2.5vw'] : 9} alignItems='center' cursor='pointer'>
+                <Flex justifyContent='center' gap={showLogo ? [null, null, null, '1.2vw', '2.5vw'] : 9} alignItems='center' cursor='pointer'>
                     <Popover trigger='hover'>
                         <PopoverTrigger>
-                            <Text _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='500' width={showLogo?'fit-content':null}>SHOP</Text>
+                            <Text _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='500' width={showLogo ? 'fit-content' : null}>SHOP</Text>
                         </PopoverTrigger>
                         <PopoverContent w='100vw' mt='-5px'>
                             <PopoverBody>
@@ -184,7 +187,7 @@ export const Navbar = () => {
                     <Popover trigger='hover'>
                         <PopoverTrigger>
                             <Text _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='400'>EXPLORE</Text>
-                       </PopoverTrigger>
+                        </PopoverTrigger>
                         <PopoverContent w='100vw' mt='-5px'>
                             <PopoverBody>
                                 <Flex my='15px' justifyContent='center' gap={10}>
@@ -297,7 +300,9 @@ export const Navbar = () => {
                         <Button leftIcon={<SearchIcon boxSize='19px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
                     </Tooltip>
                     <Tooltip label='Account'>
-                        <Button leftIcon={<Icon as={CgProfile} boxSize='23px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
+                        <Link to='/account/login'>
+                            <Button leftIcon={<Icon as={CgProfile} boxSize='23px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
+                        </Link>
                     </Tooltip>
                     <Tooltip label='Bag'>
                         <Button leftIcon={<Icon as={BiShoppingBag} boxSize='23px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
@@ -320,7 +325,9 @@ export const Navbar = () => {
                             <DrawerCloseButton />
                             <DrawerHeader>
                                 <Tooltip label='Account'>
-                                    <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white'>SIGN IN/UP</Button>
+                                    <Link to='/account/login'>
+                                        <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white'>SIGN IN/UP</Button>
+                                    </Link>
                                 </Tooltip>
                             </DrawerHeader>
 
@@ -1148,7 +1155,9 @@ export const Navbar = () => {
                             <Button leftIcon={<SearchIcon boxSize='20px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
                         </Tooltip>
                         <Tooltip label='Account'>
-                            <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
+                            <Link to='/account/login'>
+                                <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
+                            </Link>
                         </Tooltip>
                         <Tooltip label='Bag'>
                             <Button leftIcon={<Icon as={BiShoppingBag} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
@@ -1171,7 +1180,9 @@ export const Navbar = () => {
                         <DrawerCloseButton />
                         <DrawerHeader>
                             <Tooltip label='Account'>
-                                <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white'>SIGN IN/UP</Button>
+                                <Link to='/account/login'>
+                                    <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white'>SIGN IN/UP</Button>
+                                </Link>
                             </Tooltip>
                         </DrawerHeader>
 
@@ -2001,8 +2012,8 @@ export const Navbar = () => {
                 </Flex>
             </Flex>
             <Flex p='10px 10px 20px 10px'>
-                <Input _placeholder={{fontFamily:"sans-serif",letterSpacing:"1px",fontWeight:"450",color:"#12284c",opacity:"0.8"}} fontSize='16px' variant='unstyled' placeholder='SEARCH...'/>
-                <SearchIcon boxSize='22px' cursor='pointer'/>
+                <Input _placeholder={{ fontFamily: "sans-serif", letterSpacing: "1px", fontWeight: "450", color: "#12284c", opacity: "0.8" }} fontSize='16px' variant='unstyled' placeholder='SEARCH...' />
+                <SearchIcon boxSize='22px' cursor='pointer' />
             </Flex>
         </Hide>
     </>
