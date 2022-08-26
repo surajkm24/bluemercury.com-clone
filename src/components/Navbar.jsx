@@ -58,12 +58,16 @@ export const Navbar = () => {
 
             <Flex mt='0'>
                 <Spacer />
-                <img width='200px' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
+                <Link to='/'>
+                    <img width='200px' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
+                </Link>
                 <Spacer />
             </Flex>
             <Flex ref={myRef} justifyContent={showLogo ? 'space-between' : 'center'} mt='10px' position='sticky' top='0px' bg='white' alignItems='center' p='5px 0px 5px 15px' zIndex={2}>
                 <Box width='150px' display={showLogo ? 'block' : 'none'}>
-                    <Image width='100%' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
+                    <Link to='/'>
+                        <Image width='100%' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
+                    </Link>
                 </Box>
                 <Flex justifyContent='center' gap={showLogo ? [null, null, null, '1.2vw', '2.5vw'] : 9} alignItems='center' cursor='pointer'>
                     <Popover trigger='hover'>
@@ -1144,7 +1148,9 @@ export const Navbar = () => {
                     </Drawer>
                     <Spacer />
                     <Box width='150px'>
-                        <Image width='100%' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
+                        <Link to='/'>
+                            <Image width='100%' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
+                        </Link>
                     </Box>
                     <Spacer />
                     <Flex >
@@ -1999,7 +2005,9 @@ export const Navbar = () => {
                 </Drawer>
                 <Spacer />
                 <Box width='150px'>
-                    <Image width='100%' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
+                    <Link to='/'>
+                        <Image width='100%' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
+                    </Link>
                 </Box>
                 <Spacer />
                 <Flex >

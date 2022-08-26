@@ -1,8 +1,9 @@
 import { Box, Button, Heading, Input, Select, Text } from "@chakra-ui/react"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
 
 export const Signup = () => {
+    const [showBM, SetShowBM] = useState(false)
     useEffect(() => {
         (document.querySelector('title').innerText = 'Create Account - bluemercury')
     }, [])
@@ -23,7 +24,7 @@ export const Signup = () => {
             <Box border='1px solid black' mt='15px' p='8px 15px' _hover={{ borderColor: "blue" }}>
                 <Input color='gray' variant='unstyled' type='password' placeholder='Password*' borderRadius='0px' required/>
             </Box>
-            <Select variant='outline' borderRadius='0px' borderColor='black' mt='15px' placeholder='Birthday Month' color='gray'>
+            <Select display={showBM?'block':"none"} variant='outline' borderRadius='0px' borderColor='black' mt='15px' placeholder='Birthday Month' color='gray'>
                     <option value='January'>January</option>
                     <option value='February'>February</option>
                     <option value='March'>March</option>
@@ -39,7 +40,7 @@ export const Signup = () => {
             </Select>
             <Text textAlign='right' color='#12284c' fontWeight='300' fontSize='12px' mt='15px'>*Indicates Required Field</Text>
             <Box bg='#d1e8ee' p='10px' mt='20px' display='flex' alignItems='flex-start' gap='10px'>
-                <input type='checkbox' />
+                <input style={{cursor:"pointer"}} type='checkbox' onChange={()=>SetShowBM(prev=>!prev)}/>
                 <Box color='#475d79' textAlign='left'>
                    <Text display='flex' mt='-6px' fontSize='18px' letterSpacing='1px'><p style={{fontFamily:"Quickbrush,cursive",fontStyle:"italic"}}>join &nbsp;</p>BLUEREWARDS</Text>
                    <Text>Earn $10 for every $250 you spend, plus FREE birthday gifts & treatments!</Text> 
