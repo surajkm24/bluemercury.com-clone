@@ -13,6 +13,7 @@
     "@chakra-ui/react": "^2.2.8",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
+    "@trendyol-js/react-carousel": "^3.0.0",
     "framer-motion": "^7.2.0",
     "nuka-carousel": "^5.3.0",
     "react": "^18.2.0",

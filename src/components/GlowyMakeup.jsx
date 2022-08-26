@@ -2,12 +2,12 @@ import { Box, Heading, Image, Text, Show, Hide } from '@chakra-ui/react';
 import { useRef, useEffect, useState } from 'react';
 import { Carousel } from '@trendyol-js/react-carousel';
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
-import { data } from '../data/newArrivalData.json';
+import data from '../data/glowyMakeupData.json';
 
-export const NewArrivals = () => {
+export const GlowyMakeup = () => {
 
     return <div style={{ marginTop: "45px" }}>
-        <Heading cursor='pointer' textAlign='center' fontSize='28px' color='#12284C' fontWeight={200} letterSpacing='2px' fontFamily='Montserrat Light,sans-serif'>NEW ARRIVALS</Heading>
+        <Heading cursor='pointer' textAlign='center' fontSize='28px' color='#12284C' fontWeight={200} letterSpacing='2px' fontFamily='Montserrat Light,sans-serif'>DEWY, GLOWY MAKEUP</Heading>
         <Show above='1024px'>
             <div style={{ width: "90vw", margin: "50px auto 0px" }}>
                 <Carousel show={4} responsive={true} slide={4} transition={0.5} swiping={true} useArrowKeys={true} rightArrow={<ChevronRightIcon mt='10vw' boxSize='70px' cursor='pointer' />} leftArrow={<ChevronLeftIcon mt='10vw' boxSize='70px' cursor='pointer' />}>
@@ -42,7 +42,7 @@ export const NewArrivals = () => {
                     {data.map((item) => <Box key={item['ProductCard__ImageWrapper href']} textAlign='center'>
                         <Image width='90%' src={item['ProductCard__Image src']} alt='' />
                         <Text color='#12284C' fontWeight={500} fontSize='15px' letterSpacing='1px'>{item['ProductCard__Brand'].toUpperCase()}</Text>
-                        <Text color='#12284C' width='90%' margin='auto' fontSize='15px'>{item['ProductCard__Title']}</Text>
+                        <Text color='#12284C' width='85%' margin='auto' fontSize='15px'>{item['ProductCard__Title']}</Text>
                         <Text color='#12284C'>{item["ProductCard__Price"]}</Text>
                     </Box>)}
                 </Carousel>

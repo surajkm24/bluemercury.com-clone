@@ -1,11 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Show, Hide } from '@chakra-ui/react';
 
-// {{/* <img srcset="//cdn.shopify.com/s/files/1/0283/0185/2747/files/lightweight-skincare-hp-hero-mob_400x.jpg?v=1660596943 400w,//cdn.shopify.com/s/files/1/0283/0185/2747/files/lightweight-skincare-hp-hero-mob_600x.jpg?v=1660596943 600w,//cdn.shopify.com/s/files/1/0283/0185/2747/files/lightweight-skincare-hp-hero-mob_900x.jpg?v=1660596943 900w," alt=""/> */}
-// {/* <img src="//cdn.shopify.com/s/files/1/0283/0185/2747/files/routines-extend-your-summer-glow-hero-mob.jpg?v=1660082597&amp;width=900" alt="" srcset="//cdn.shopify.com/s/files/1/0283/0185/2747/files/routines-extend-your-summer-glow-hero-mob.jpg?v=1660082597&amp;width=400 400w, //cdn.shopify.com/s/files/1/0283/0185/2747/files/routines-extend-your-summer-glow-hero-mob.jpg?v=1660082597&amp;width=600 600w, //cdn.shopify.com/s/files/1/0283/0185/2747/files/routines-extend-your-summer-glow-hero-mob.jpg?v=1660082597&amp;width=900 900w" width="900" height="1260" class="slide-image" sizes="100vw"> */}
-// // <img class="slide-image" loading="lazy" srcset="//cdn.shopify.com/s/files/1/0283/0185/2747/files/lune-aster-sunset-eyeshadow-hero-mob-2_400x.jpg?v=1659557535 400w,//cdn.shopify.com/s/files/1/0283/0185/2747/files/lune-aster-sunset-eyeshadow-hero-mob-2_600x.jpg?v=1659557535 600w,//cdn.shopify.com/s/files/1/0283/0185/2747/files/lune-aster-sunset-eyeshadow-hero-mob-2_900x.jpg?v=1659557535 900w," alt="">
-// }
-
 export const HeaderCarousel = () => {
     const [slide, setSlide] = useState(1);
     const slideRef = useRef(null);

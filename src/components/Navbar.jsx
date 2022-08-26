@@ -58,14 +58,14 @@ export const Navbar = () => {
                 <img width='200px' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
                 <Spacer />
             </Flex>
-            <Flex ref={myRef} justifyContent={showLogo ? 'space-between' : 'center'} gap={5} mt='10px' position='sticky' top='0px' bg='white' alignItems='center' p='5px' zIndex={2}>
+            <Flex ref={myRef} justifyContent={showLogo ? 'space-between' : 'center'}  mt='10px' position='sticky' top='0px' bg='white' alignItems='center' p='5px 0px 5px 15px' zIndex={2}>
                 <Box width='150px' display={showLogo ? 'block' : 'none'}>
                     <Image width='100%' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
                 </Box>
-                <Flex justifyContent='center' gap={showLogo ? 5 : 9} alignItems='center'>
+                <Flex justifyContent='center' gap={showLogo ?[null,null,null,'1.2vw','2.5vw'] : 9} alignItems='center' cursor='pointer'>
                     <Popover trigger='hover'>
                         <PopoverTrigger>
-                            <Button _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='500'>SHOP</Button>
+                            <Text _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='500' width={showLogo?'fit-content':null}>SHOP</Text>
                         </PopoverTrigger>
                         <PopoverContent w='100vw' mt='-5px'>
                             <PopoverBody>
@@ -96,7 +96,7 @@ export const Navbar = () => {
                     </Popover>
                     <Popover trigger='hover'>
                         <PopoverTrigger>
-                            <Button _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='400'>NEW!</Button>
+                            <Text _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='400'>NEW!</Text>
                         </PopoverTrigger>
                         <PopoverContent w='100vw' mt='-5px'>
                             <PopoverBody>
@@ -130,7 +130,7 @@ export const Navbar = () => {
                     </Popover>
                     <Popover trigger='hover'>
                         <PopoverTrigger>
-                            <Button _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='400'>BRANDS</Button>
+                            <Text _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='400'>BRANDS</Text>
                         </PopoverTrigger>
                         <PopoverContent w='100vw' mt='-5px'>
                             <PopoverBody maxWidth='100vw'>
@@ -183,8 +183,8 @@ export const Navbar = () => {
                     </Popover>
                     <Popover trigger='hover'>
                         <PopoverTrigger>
-                            <Button _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='400'>EXPLORE</Button>
-                        </PopoverTrigger>
+                            <Text _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='400'>EXPLORE</Text>
+                       </PopoverTrigger>
                         <PopoverContent w='100vw' mt='-5px'>
                             <PopoverBody>
                                 <Flex my='15px' justifyContent='center' gap={10}>
@@ -215,7 +215,7 @@ export const Navbar = () => {
                     </Popover>
                     <Popover trigger='hover'>
                         <PopoverTrigger>
-                            <Button _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='400'>EVENTS</Button>
+                            <Text _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='400'>EVENTS</Text>
                         </PopoverTrigger>
                         <PopoverContent w='100vw' mt='-5px'>
                             <PopoverBody>
@@ -236,7 +236,7 @@ export const Navbar = () => {
                     </Popover>
                     <Popover trigger='hover'>
                         <PopoverTrigger>
-                            <Button _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='400'>BLUEREWARDS</Button>
+                            <Text _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='400'>BLUEREWARDS</Text>
                         </PopoverTrigger>
                         <PopoverContent w='100vw' mt='-5px'>
                             <PopoverBody>
@@ -260,7 +260,7 @@ export const Navbar = () => {
                     </Popover>
                     <Popover trigger='hover'>
                         <PopoverTrigger>
-                            <Button _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='400'>ROUTINE REBOOT</Button>
+                            <Text _hover={{ borderBottom: "2px solid black", color: "#12284c", fontWeight: "500" }} borderRadius='0px' variant='ghost' color='#51617c' fontSize='16px' fontWeight='400'>ROUTINE REBOOT</Text>
                         </PopoverTrigger>
                         <PopoverContent w='100vw' mt='-5px'>
                             <PopoverBody >
@@ -291,23 +291,23 @@ export const Navbar = () => {
                 </Flex>
                 <Flex display={showLogo ? 'block' : 'none'}>
                     <Tooltip label='Wishlist'>
-                        <Button leftIcon={<Icon as={AiOutlineHeart} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
+                        <Button leftIcon={<Icon as={AiOutlineHeart} boxSize='23px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
                     </Tooltip>
                     <Tooltip label='Search'>
-                        <Button leftIcon={<SearchIcon boxSize='20px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
+                        <Button leftIcon={<SearchIcon boxSize='19px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
                     </Tooltip>
                     <Tooltip label='Account'>
-                        <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
+                        <Button leftIcon={<Icon as={CgProfile} boxSize='23px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
                     </Tooltip>
                     <Tooltip label='Bag'>
-                        <Button leftIcon={<Icon as={BiShoppingBag} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
+                        <Button leftIcon={<Icon as={BiShoppingBag} boxSize='23px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
                     </Tooltip>
                 </Flex>
             </Flex>
         </Show>
         <Show above='768px'>
             <Hide above='1024px'>
-                <Flex alignItems='center' padding='5px 0px'>
+                <Flex alignItems='center' padding='5px 0px' position='sticky' top='0px' bg='white' zIndex={2}>
                     <Button variant='ghost' _hover="white" onClick={onMidNavOpen}><HamburgerIcon boxSize='25px' /></Button>
                     <Drawer
                         isOpen={isMidNavOpen}
@@ -2002,7 +2002,7 @@ export const Navbar = () => {
             </Flex>
             <Flex p='10px 10px 20px 10px'>
                 <Input _placeholder={{fontFamily:"sans-serif",letterSpacing:"1px",fontWeight:"450",color:"#12284c",opacity:"0.8"}} fontSize='16px' variant='unstyled' placeholder='SEARCH...'/>
-                <SearchIcon boxSize='22px'/>
+                <SearchIcon boxSize='22px' cursor='pointer'/>
             </Flex>
         </Hide>
     </>
