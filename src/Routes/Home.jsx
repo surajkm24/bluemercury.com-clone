@@ -8,8 +8,12 @@ import { NewBrand } from '../components/NewBrand';
 import { OffersAndServices } from '../components/OffersAndServices';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { useEffect } from 'react';
 
 export const Home = () => {
+    useEffect(()=>{
+        (document.querySelector('title').innerText='Cosmetics, Skincare, Wellness and Spa | bluemercury')
+    },[])
     return <>
         <Navbar/>
         <HeaderCarousel />

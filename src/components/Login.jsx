@@ -1,8 +1,13 @@
 import { Box, Button, Heading, Input, Text } from "@chakra-ui/react"
+import { useEffect } from "react"
 
 export const Login = () => {
+
+    useEffect(()=>{
+        (document.querySelector('title').innerText='Account - bluemercury')
+    },[])
     return <>
-        <Box w={['280px','460px']} m='auto'>
+        <Box w={['280px','460px']} m='auto' mt='65px' mb='140px'>
             <Heading color='#12284c' letterSpacing='2px' fontSize='37px' fontWeight='400' textAlign='center'>LOGIN</Heading>
             <Text textAlign='center' color='#12284c' mt='20px' fontSize='19px' fontWeight='300'>Please enter your e-mail and password.</Text>
             <Box border='1px solid black' mt='20px' p='7px 14px' _hover={{borderColor:"blue"}}>
