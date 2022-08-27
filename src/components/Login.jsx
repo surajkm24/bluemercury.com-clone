@@ -20,7 +20,7 @@ export const Login = () => {
         let uniqData = usersData.filter(item => item.email === formData.email && item.password === formData.password);
         if (uniqData.length === 0) {
             setAlert(true);
-            setTimeout(()=>{
+            setTimeout(()=>{ 
                 setAlert(false)
             },4000)
             return;
