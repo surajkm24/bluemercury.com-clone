@@ -9,6 +9,7 @@ import { OffersAndServices } from '../components/OffersAndServices';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { useEffect } from 'react';
+import { OffersText } from '../components/OffersText';
 
 export const Home = () => {
     useEffect(()=>{
@@ -16,6 +17,7 @@ export const Home = () => {
     },[])
     return <>
         <Navbar/>
+        <OffersText/>
         <HeaderCarousel />
         <NewArrivals />
         <NewProductNest />
