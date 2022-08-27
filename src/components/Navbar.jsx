@@ -4,7 +4,7 @@ import { AiFillExclamationCircle, AiOutlineHeart } from 'react-icons/ai';
 import { CgProfile } from 'react-icons/cg';
 import { BiShoppingBag } from 'react-icons/bi';
 import { VscLocation } from 'react-icons/vsc';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useContext } from 'react';
 import { SkinCare } from './NavComponents/SkinCare';
 import { Makeup } from './NavComponents/Makeup';
 import { Hair } from './NavComponents/Hair';
@@ -22,10 +22,12 @@ import { HamburgerIcon } from '@chakra-ui/icons';
 import { Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, } from '@chakra-ui/react'
 import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, } from '@chakra-ui/react'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Context/AuthContext';
 
 export const Navbar = () => {
     const [count, setCount] = useState(1);
     const [showLogo, setShowLogo] = useState(false);
+    const { isAuth } = useContext(AuthContext);
     const { isOpen: isMidNavOpen, onOpen: onMidNavOpen, onClose: onMidNavClose } = useDisclosure();
     const { isOpen: isSmallNavOpen, onOpen: onSmallNavOpen, onClose: onSmallNavClose } = useDisclosure();
     const myRef = useRef();
@@ -45,11 +47,16 @@ export const Navbar = () => {
                     <Tooltip label='Search'>
                         <Button leftIcon={<SearchIcon boxSize='20px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'>SEARCH</Button>
                     </Tooltip>
-                    <Tooltip label='Account'>
+                    {!isAuth.loggedin && <Tooltip label='Account'>
                         <Link to='/account/login'>
-                            <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'>SIGN IN/UP</Button>
+                            <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white'>SIGN IN/UP</Button>
                         </Link>
-                    </Tooltip>
+                    </Tooltip>}
+                    {isAuth.loggedin && <Tooltip label='Account'>
+                        <Link to='#'>
+                            <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white'>ACCOUNT</Button>
+                        </Link>
+                    </Tooltip>}
                     <Tooltip label='Bag'>
                         <Button leftIcon={<Icon as={BiShoppingBag} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'>BAG</Button>
                     </Tooltip>
@@ -303,11 +310,16 @@ export const Navbar = () => {
                     <Tooltip label='Search'>
                         <Button leftIcon={<SearchIcon boxSize='19px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
                     </Tooltip>
-                    <Tooltip label='Account'>
+                    {!isAuth.loggedin && <Tooltip label='Account'>
                         <Link to='/account/login'>
-                            <Button leftIcon={<Icon as={CgProfile} boxSize='23px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
+                            <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white'></Button>
                         </Link>
-                    </Tooltip>
+                    </Tooltip>}
+                    {isAuth.loggedin && <Tooltip label='Account'>
+                        <Link to='#'>
+                            <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white'></Button>
+                        </Link>
+                    </Tooltip>}
                     <Tooltip label='Bag'>
                         <Button leftIcon={<Icon as={BiShoppingBag} boxSize='23px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
                     </Tooltip>
@@ -328,11 +340,16 @@ export const Navbar = () => {
                         <DrawerContent >
                             <DrawerCloseButton />
                             <DrawerHeader>
-                                <Tooltip label='Account'>
+                                {!isAuth.loggedin && <Tooltip label='Account'>
                                     <Link to='/account/login'>
                                         <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white'>SIGN IN/UP</Button>
                                     </Link>
-                                </Tooltip>
+                                </Tooltip>}
+                                {isAuth.loggedin && <Tooltip label='Account'>
+                                    <Link to='#'>
+                                        <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white'>ACCOUNT</Button>
+                                    </Link>
+                                </Tooltip>}
                             </DrawerHeader>
 
                             <DrawerBody pb='30px'>
@@ -1160,11 +1177,16 @@ export const Navbar = () => {
                         <Tooltip label='Search'>
                             <Button leftIcon={<SearchIcon boxSize='20px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
                         </Tooltip>
-                        <Tooltip label='Account'>
+                        {!isAuth.loggedin && <Tooltip label='Account'>
                             <Link to='/account/login'>
-                                <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
+                                <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white'></Button>
                             </Link>
-                        </Tooltip>
+                        </Tooltip>}
+                        {isAuth.loggedin && <Tooltip label='Account'>
+                            <Link to='#'>
+                                <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white'></Button>
+                            </Link>
+                        </Tooltip>}
                         <Tooltip label='Bag'>
                             <Button leftIcon={<Icon as={BiShoppingBag} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'></Button>
                         </Tooltip>
@@ -1185,11 +1207,16 @@ export const Navbar = () => {
                     <DrawerContent >
                         <DrawerCloseButton />
                         <DrawerHeader>
-                            <Tooltip label='Account'>
+                            {!isAuth.loggedin && <Tooltip label='Account'>
                                 <Link to='/account/login'>
                                     <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white'>SIGN IN/UP</Button>
                                 </Link>
-                            </Tooltip>
+                            </Tooltip>}
+                            {isAuth.loggedin && <Tooltip label='Account'>
+                                <Link to='#'>
+                                    <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white'>ACCOUNT</Button>
+                                </Link>
+                            </Tooltip>}
                         </DrawerHeader>
 
                         <DrawerBody pb='30px'>
