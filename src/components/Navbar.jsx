@@ -49,12 +49,12 @@ export const Navbar = () => {
                     </Tooltip>
                     {!isAuth.loggedin && <Tooltip label='Account'>
                         <Link to='/account/login'>
-                            <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white'>SIGN IN/UP</Button>
+                            <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'>SIGN IN/UP</Button>
                         </Link>
                     </Tooltip>}
                     {isAuth.loggedin && <Tooltip label='Account'>
                         <Link to='#'>
-                            <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white'>ACCOUNT</Button>
+                            <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'>ACCOUNT</Button>
                         </Link>
                     </Tooltip>}
                     <Tooltip label='Bag'>
