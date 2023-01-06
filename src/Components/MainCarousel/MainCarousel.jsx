@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Show, Hide } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import { SlideOne } from "./SlideOne";
 import { SlideTwo } from "./SlideTwo";
 import { SlideThree } from "./SlideThree";
@@ -13,32 +13,28 @@ export const MainCarousel = () => {
             setSlide(prev => prev === 1 ? 2 : prev === 2 ? 3 : 1)
         }, 5000)
     }
-    // useEffect(() => {
-    //     if (slideRef.current !== null) return;
-    //     slideRef.current = setInterval(() => {
-    //         setSlide(prev => prev === 1 ? 2 : prev === 2 ? 3 : 1)
-    //     }, 5000)
-    // }, [])
+    useEffect(() => {
+        slideRef.current = setInterval(() => {
+            setSlide(prev => prev === 1 ? 2 : prev === 2 ? 3 : 1)
+        }, 5000)
+        return () => {
+            clearInterval(slideRef.current);
+        }
+    }, [])
     return (
-        <div className='carousel' >
+        <Box className='carousel' >
             <SlideOne slide={slide} />
             <SlideTwo slide={slide} />
             <SlideThree slide={slide} />
-            <div style={{ display: "flex", gap: "10px", justifyContent: "center", padding: "20px 0px 0px 0px" }}>
-                <div onClick={() => {
-                    setSlide(1)
-                    clickSlide()
-                }} style={{ background: slide === 1 ? 'black' : 'white', border: "1px solid black", borderRadius: "50%", height: "11px", width: "11px", cursor: "pointer" }}></div>
-                <div onClick={() => {
-                    setSlide(2)
-                    clickSlide()
-                }} style={{ background: slide === 2 ? 'black' : 'white', border: "1px solid black", borderRadius: "50%", height: "11px", width: "11px", cursor: "pointer" }}></div>
-                <div onClick={() => {
-                    setSlide(3)
-                    clickSlide()
-                }} style={{ background: slide === 3 ? 'black' : 'white', border: "1px solid black", borderRadius: "50%", height: "11px", width: "11px", cursor: "pointer" }}></div>
-            </div>
-        </div>)
+            <Flex gap='10px' justify='center' p='15px'>
+                {new Array(3).fill(1).map((ele, i) => (
+                    <Box key={i + 1} border='1px solid black' borderRadius={'50%'}
+                        bg={slide === (i + 1) ? "black" : "white"} h='12px' w='12px' cursor='pointer'
+                        onClick={() => { setSlide((i + 1)), clickSlide() }}>
+                    </Box>
+                ))}
+            </Flex>
+        </Box>)
 }
 
 
