@@ -31,7 +31,8 @@ export const SlideOne = ({ slide }) => {
                         Proper pre-bed beauty prep will not only help you rest easy, but also simplify your AM routine. With just a few advance steps, you’ll hop out of bed looking bright-eyed, radiant and ready to go.
                     </Text>
                     <Text style={{ marginTop: "2%", color: "#12284c", letterSpacing: "1px", textDecoration: 'underline', textDecorationColor: "#12284c" }} fontWeight={700}
-                        fontSize={{ base: "14px", sm: "18px", md: "1.2vw" }}>
+                        fontSize={{ base: "14px", sm: "18px", md: "1.2vw" }}
+                        cursor='pointer'>
                         SHOP NOW
                     </Text>
                 </Box>

@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { Show, Hide } from '@chakra-ui/react';
 import { SlideOne } from "./SlideOne";
+import { SlideTwo } from "./SlideTwo";
 
 export const MainCarousel = () => {
-    const [slide, setSlide] = useState(1);
+    const [slide, setSlide] = useState(2);
     const slideRef = useRef(null);
     const clickSlide = () => {
         clearInterval(slideRef.current);
@@ -20,24 +21,8 @@ export const MainCarousel = () => {
     return (
         <div className='carousel' >
             <SlideOne slide={slide} />
-            <div className='carousel-item' style={{ cursor: "pointer", display: slide === 2 ? 'block' : 'none', width: "100vw", position: "relative" }}>
-                <Show above='768px'>
-                    <img width='100%' src='//cdn.shopify.com/s/files/1/0283/0185/2747/files/lightweight-skincare-hp-hero-des_1300x.jpg?v=1660596941 1300w,//cdn.shopify.com/s/files/1/0283/0185/2747/files/lightweight-skincare-hp-hero-des_1600x.jpg?v=1660596941' alt='' />
-                    <div style={{ width: "45%", position: "absolute", top: "10%", left: "10px", textAlign: "left" }}>
-                        <p style={{ color: "#12284c", letterSpacing: "1px", fontSize: "3vw", fontWeight: "350" }}>DEW DROPS</p>
-                        <p style={{ color: "#12284c", fontSize: "1.9vw", fontWeight: "300" }}>Check out our favorite new and bestselling serums, lotions and lightweight creams, all of which hydrate beautifully without feeling the least bit heavy on your skin.</p>
-                        <p style={{ marginTop: "2%" }}><b style={{ color: "#12284c", letterSpacing: "1px", fontSize: "1.4vw", textDecoration: 'underline', textDecorationColor: "#12284c" }}>SHOP NOW</b></p>
-                    </div>
-                </Show>
-                <Hide above='768px'>
-                    <img width='100%' src='//cdn.shopify.com/s/files/1/0283/0185/2747/files/lightweight-skincare-hp-hero-mob_400x.jpg?v=1660596943' />
-                    <div style={{ width: "100%", position: "absolute", bottom: "15vw", textAlign: "center" }}>
-                        <p style={{ color: "#12284c", letterSpacing: "1px", fontSize: "30px", fontWeight: "350" }}>DEW DROPS</p>
-                        <p style={{ color: "#12284c", fontSize: "17px", fontWeight: "300" }}>Check out our favorite new and bestselling <br />serums, lotions and lightweight creams, all of <br />which hydrate beautifully without feeling the least <br />bit heavy on your skin.</p>
-                        <p style={{ marginTop: "2%" }}><b style={{ color: "#12284c", letterSpacing: "1px", fontSize: "18px", textDecoration: 'underline', textDecorationColor: "#12284c" }}>SHOP NOW</b></p>
-                    </div>
-                </Hide>
-            </div>
+            <SlideTwo slide={slide} />
+            
             <div className='carousel-item' style={{ cursor: "pointer", display: slide === 3 ? 'block' : 'none', width: "100vw", position: "relative" }}>
                 <Show above='768px'>
                     <img width='100%' src='//cdn.shopify.com/s/files/1/0283/0185/2747/files/lune-aster-sunset-eyeshadow-hero-des_1300x.jpg?v=1659557146 1300w' alt='' />
