@@ -2,9 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { Show, Hide } from '@chakra-ui/react';
 import { SlideOne } from "./SlideOne";
 import { SlideTwo } from "./SlideTwo";
+import { SlideThree } from "./SlideThree";
 
 export const MainCarousel = () => {
-    const [slide, setSlide] = useState(2);
+    const [slide, setSlide] = useState(3);
     const slideRef = useRef(null);
     const clickSlide = () => {
         clearInterval(slideRef.current);
@@ -22,27 +23,7 @@ export const MainCarousel = () => {
         <div className='carousel' >
             <SlideOne slide={slide} />
             <SlideTwo slide={slide} />
-            
-            <div className='carousel-item' style={{ cursor: "pointer", display: slide === 3 ? 'block' : 'none', width: "100vw", position: "relative" }}>
-                <Show above='768px'>
-                    <img width='100%' src='//cdn.shopify.com/s/files/1/0283/0185/2747/files/lune-aster-sunset-eyeshadow-hero-des_1300x.jpg?v=1659557146 1300w' alt='' />
-                    <div style={{ width: "35%", position: "absolute", top: "10%", left: "10px", textAlign: "left" }}>
-                        <p style={{ marginBottom: "-10px" }}><b style={{ color: "#12284c", letterSpacing: "1px", fontSize: "1.8vw", fontWeight: "400" }}>LUNE + ASTER</b></p>
-                        <p style={{ color: "#12284c", letterSpacing: "1px", fontSize: "3vw", fontWeight: "350" }}>Dusk + Shadows</p>
-                        <p style={{ color: "#12284c", fontSize: "1.9vw", fontWeight: "350", lineHeight: "2vw" }}>This new pallete features five universal, sunset inspired shades in matte and shimmer finishes, so you can create easily an alluring eye look!</p>
-                        <p style={{ marginTop: "4%" }}><b style={{ color: "#12284c", letterSpacing: "1px", fontSize: "1.4vw", textDecoration: 'underline', textDecorationColor: "#12284c" }}>SHOP NOW</b></p>
-                    </div>
-                </Show>
-                <Hide above='768px'>
-                    <img width='100%' src='//cdn.shopify.com/s/files/1/0283/0185/2747/files/lune-aster-sunset-eyeshadow-hero-mob-2_400x.jpg?v=1659557535' alt='' />
-                    <div style={{ width: "100%", position: "absolute", bottom: "15vw", textAlign: "center" }}>
-                        <p style={{ marginBottom: "-10px" }}><b style={{ color: "#12284c", letterSpacing: "1px", fontSize: "22px", fontWeight: "500" }}>LUNE + ASTER</b></p>
-                        <p style={{ color: "#12284c", letterSpacing: "1px", fontSize: "30px", fontWeight: "350" }}>Dusk + Shadows</p>
-                        <p style={{ color: "#12284c", fontSize: "19px", fontWeight: "350" }}>This new pallete features five universal, sunset- <br />inspired shades in matte and shimmer finishes, so <br />you can create easily an alluring eye look!</p>
-                        <p style={{ marginTop: "2%" }}><b style={{ color: "#12284c", letterSpacing: "1px", fontSize: "18px", textDecoration: 'underline', textDecorationColor: "#12284c" }}>SHOP NOW</b></p>
-                    </div>
-                </Hide>
-            </div>
+            <SlideThree slide={slide} />
             <div style={{ display: "flex", gap: "10px", justifyContent: "center", padding: "20px 0px 0px 0px" }}>
                 <div onClick={() => {
                     setSlide(1)

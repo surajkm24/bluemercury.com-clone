@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, Image, Text, Highlight } from '@chakra-ui/react';
+import { Box, Flex, Image, Text } from '@chakra-ui/react';
 const imgs = ["//cdn.shopify.com/s/files/1/0283/0185/2747/files/lightweight-skincare-hp-hero-des_1300x.jpg?v=1660596941 1300w,//cdn.shopify.com/s/files/1/0283/0185/2747/files/lightweight-skincare-hp-hero-des_1600x.jpg?v=1660596941", "//cdn.shopify.com/s/files/1/0283/0185/2747/files/lightweight-skincare-hp-hero-mob_400x.jpg?v=1660596943"];
 
 export const SlideTwo = ({ slide }) => {
