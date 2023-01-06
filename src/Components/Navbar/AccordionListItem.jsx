@@ -12,11 +12,11 @@ export const AccordionListItem = ({ item }) => {
                 <AccordionIcon />
             </AccordionButton>
             <AccordionPanel pb={4}>
-                {item?.children?.map((child) =>
+                {item?.children?.map((child, i) =>
                     child?.type === 'child' ? (
-                        <Child title={child.title} />
+                        <Child title={child.title} key={i + 1} />
                     ) : (
-                        <ChildAccordion child={child} />
+                        <ChildAccordion child={child} key={i + 1} />
                     )
                 )}
             </AccordionPanel>

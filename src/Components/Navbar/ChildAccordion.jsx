@@ -11,8 +11,8 @@ export const ChildAccordion = ({ child }) => {
             </AccordionButton>
             <AccordionPanel pb={4}>
                 {
-                    child?.children?.map((item) => (
-                        <Box>
+                    child?.children?.map((item, i) => (
+                        <Box key={i + 1}>
                             <Button letterSpacing='1px' color='#12284c' fontSize="13px" fontWeight='499' variant='ghost' _hover='white'>{item.title}</Button>
                         </Box>
                     ))

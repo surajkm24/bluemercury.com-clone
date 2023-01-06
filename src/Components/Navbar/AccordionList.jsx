@@ -6,11 +6,11 @@ import { SimpleListItem } from './SimpleListItem.jsx';
 export const AccordionList = () => {
     return (
         <Accordion allowMultiple allowToggle>
-            {data.map((item) =>
+            {data.map((item, i) =>
                 item.type === 'button' ? (
-                    <SimpleListItem title={item.title} />
+                    <SimpleListItem title={item.title} key={i + 1} />
                 ) : (
-                    <AccordionListItem item={item} />
+                    <AccordionListItem item={item} key={i + 1} />
                 )
             )}
         </Accordion>
