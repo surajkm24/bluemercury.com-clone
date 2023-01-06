@@ -26,13 +26,15 @@ export const Features = () => {
     return (
         <Flex ref={myRef} justifyContent={showLogo ? 'space-between' : 'center'} mt='10px'
             position='sticky' top='0px' bg='white' alignItems='center' p='5px 0px 5px 15px' zIndex={2}
-            display={{ base: "none", lg: "flex" }} overflow={'hidden'}>
+            display={{ base: "none", lg: "flex" }}>
             <Box width='150px' display={showLogo ? 'block' : 'none'}>
                 <Link to='/'>
                     <Image width='100%' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
                 </Link>
             </Box>
-            <Flex justifyContent='center' gap={showLogo ? [null, null, null, '1.2vw', '2.5vw'] : 9} alignItems='center' cursor='pointer'>
+            <Flex justifyContent='center'
+                gap={showLogo ? [null, null, null, '1.2vw', '2.5vw'] : 9}
+                alignItems='center' cursor='pointer' >
                 <Shop count={count} setCount={setCount} showLogo={showLogo} />
                 <New />
                 <Brands />
