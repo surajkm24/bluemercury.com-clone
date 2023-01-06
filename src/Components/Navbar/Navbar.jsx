@@ -37,7 +37,7 @@ export const Navbar = () => {
         myRef.current.offsetTop > 87 ? setShowLogo(true) : setShowLogo(false);
     }
     return <>
-        <Flex bg='white' align='center' justify='space-between' py={{base:"5px",lg:"0px"}}>
+        <Flex bg='white' align='center' justify='space-between' py={{ base: "5px", lg: "0px" }}>
             <Button leftIcon={<Icon as={VscLocation} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'
                 display={{ base: "none", lg: "flex" }}>
                 STORE & SPA LOCATOR
@@ -57,7 +57,8 @@ export const Navbar = () => {
                     </Button>
                 </Tooltip>
                 <Tooltip label='Search'>
-                    <Button leftIcon={<SearchIcon boxSize='20px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'>
+                    <Button leftIcon={<SearchIcon boxSize='20px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'
+                    display={{ base: "none", md: "flex" }}>
                         <Text display={{ base: "none", lg: "flex" }}>
                             SEARCH
                         </Text>
@@ -65,7 +66,8 @@ export const Navbar = () => {
                 </Tooltip>
                 {!isAuth.loggedin && <Tooltip label='Account'>
                     <Link to='/account/login'>
-                        <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'>
+                        <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'
+                        display={{ base: "none", md: "flex" }}>
                             <Text display={{ base: "none", lg: "flex" }}>
                                 SIGN IN/UP
                             </Text>
@@ -74,7 +76,8 @@ export const Navbar = () => {
                 </Tooltip>}
                 {isAuth.loggedin && <Tooltip label='Account'>
                     <Link to='#'>
-                        <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'>
+                        <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'
+                        display={{ base: "none", md: "flex" }}>
                             <Text display={{ base: "none", lg: "flex" }}>
                                 ACCOUNT
                             </Text>
@@ -90,11 +93,14 @@ export const Navbar = () => {
                 </Tooltip>
             </Flex>
         </Flex>
-
-        <Flex mt='0' justify='center' display={{lg:"flex",base:"none"}}>
+        <Flex mt='0' justify='center' display={{ lg: "flex", base: "none" }}>
             <Link to='/'>
                 <img width='200px' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
             </Link>
+        </Flex>
+        <Flex p='10px 10px 20px 10px' display={{ base: "flex", md: "none" }}>
+            <Input _placeholder={{ fontFamily: "sans-serif", letterSpacing: "1px", fontWeight: "450", color: "#12284c", opacity: "0.8" }} fontSize='16px' variant='unstyled' placeholder='SEARCH...' />
+            <SearchIcon boxSize='22px' cursor='pointer' />
         </Flex>
         {/* <Flex ref={myRef} justifyContent={showLogo ? 'space-between' : 'center'} mt='10px' position='sticky' top='0px' bg='white' alignItems='center' p='5px 0px 5px 15px' zIndex={2}>
                 <Box width='150px' display={showLogo ? 'block' : 'none'}>
