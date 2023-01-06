@@ -1,0 +1,65 @@
+[
+    {
+        "ProductCard__ImageWrapper href": "https://bluemercury.com/products/balmlabs-clearbalm-power-elixir",
+        "ProductCard__Image src": "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-195893475407-1_235x.jpg?v=1659989243",
+        "ProductCard__Brand": "BalmLabs",
+        "ProductCard__Title": "ClearBalm Power Elixir",
+        "ProductCard__Price": "$58"
+      },
+      {
+        "ProductCard__ImageWrapper href": "https://bluemercury.com/products/hum-nutrition-daily-cleanse-clear-skin-and-acne-supplement",
+        "ProductCard__Image src": "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-855514005030-1_235x.jpg?v=1660838903",
+        "ProductCard__Brand": "Hum Nutrition",
+        "ProductCard__Title": "Daily Cleanse® Clear Skin and Acne Supplement",
+        "ProductCard__Price": "$26"
+      },
+      {
+        "ProductCard__ImageWrapper href": "https://bluemercury.com/products/sisley-paris-exfoliating-enzyme-mask",
+        "ProductCard__Image src": "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3473311524355-1_235x.jpg?v=1660069778",
+        "ProductCard__Brand": "Sisley-Paris",
+        "ProductCard__Title": "Exfoliating Enzyme Mask",
+        "ProductCard__Price": "$135"
+      },
+      {
+        "ProductCard__ImageWrapper href": "https://bluemercury.com/products/eltamd-uv-clear-tinted-broad-spectrum-spf-46",
+        "ProductCard__Image src": "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-390205025206-1_235x.jpg?v=1660229578",
+        "ProductCard__Brand": "EltaMD",
+        "ProductCard__Title": "UV Clear Tinted Broad-Spectrum SPF 46",
+        "ProductCard__Price": "$41"
+      },
+      {
+        "ProductCard__ImageWrapper href": "https://bluemercury.com/products/lake-skye-11-11-eau-de-parfum",
+        "ProductCard__Image src": "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-17oz-087327005284-1_235x.jpg?v=1659760712",
+        "ProductCard__Brand": "Lake & Skye",
+        "ProductCard__Title": "11 11 Eau de Parfum",
+        "ProductCard__Price": "$36 - $98"
+      },
+      {
+        "ProductCard__ImageWrapper href": "https://bluemercury.com/products/lake-skye-11-11-candle",
+        "ProductCard__Image src": "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-087327005291-1_235x.jpg?v=1659760709",
+        "ProductCard__Brand": "Lake & Skye",
+        "ProductCard__Title": "11 11 Candle",
+        "ProductCard__Price": "$48"
+      },
+      {
+        "ProductCard__ImageWrapper href": "https://bluemercury.com/products/oribe-limited-edition-dry-texturizing-spray",
+        "ProductCard__Image src": "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-840035217833-1_235x.jpg?v=1660205955",
+        "ProductCard__Brand": "Oribe",
+        "ProductCard__Title": "Limited Edition Dry Texturizing Spray",
+        "ProductCard__Price": "$49"
+      },
+      {
+        "ProductCard__ImageWrapper href": "https://bluemercury.com/products/lune-aster-sunset-eyeshadow-palette",
+        "ProductCard__Image src": "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-814309022799-1_235x.jpg?v=1660624151",
+        "ProductCard__Brand": "Lune+Aster",
+        "ProductCard__Title": "Sunset Eyeshadow Palette",
+        "ProductCard__Price": "$48"
+      },
+      {
+        "ProductCard__ImageWrapper href": "https://bluemercury.com/products/lune-aster-sunset-bronzer-blush-duo",
+        "ProductCard__Image src": "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-814309022829-1_235x.jpg?v=1660624144",
+        "ProductCard__Brand": "Lune+Aster",
+        "ProductCard__Title": "Sunset Bronzer & Blush Duo",
+        "ProductCard__Price": "$46"
+      }
+]
