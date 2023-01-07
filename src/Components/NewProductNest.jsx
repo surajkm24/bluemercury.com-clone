@@ -1,9 +1,10 @@
-import { Box, Heading, Text, Flex, Image, Show, Hide, useDisclosure } from "@chakra-ui/react"
+import { Box, Heading, Text, Flex, Image, useDisclosure } from "@chakra-ui/react"
 import { Carousel } from '@trendyol-js/react-carousel';
 import { StarIcon, ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import { useState } from "react";
 import { NestDrawer } from "./NestDrawer";
 import { data } from '../data/nestData.js';
+import npn from '../assets/npn.webp'
 
 export const NewProductNest = () => {
     const [slide, setSlide] = useState(1);
@@ -16,7 +17,7 @@ export const NewProductNest = () => {
             <Flex mt='20px' mb='35px' justifyContent='space-between' px={[null, null, '14%', '20%']}
                 display={{ md: "flex", base: "none" }}>
                 <Box width='47%'>
-                    <Image width='100%' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/TABBED_-_nest_pumpkin_and_plum_600x.progressive.jpg?v=1661282031' alt='' />
+                    <Image width='100%' src={npn} alt='' />
                 </Box>
                 <Box width='47%' bg='white' textAlign='center' position='relative'>
                     <Carousel responsive={true} show={1} slide={1} transition={0.5} rightArrow={<ChevronRightIcon mt='15vw' boxSize='25px' cursor='pointer' onClick={() => setSlide(prev => prev === 1 ? 2 : 1)} />} leftArrow={<ChevronLeftIcon mt='15vw' boxSize='25px' cursor='pointer' onClick={() => setSlide(prev => prev === 2 ? 1 : 2)} />}>
@@ -38,7 +39,7 @@ export const NewProductNest = () => {
             </Flex>
             <Box mt='20px' display={{ md: "none", base: "block" }}>
                 <Box px='10%'>
-                    <Image width='100%' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/TABBED_-_nest_pumpkin_and_plum_600x.progressive.jpg?v=1661282031' alt='' />
+                    <Image width='100%' src={npn} alt='' />
                 </Box>
                 <Heading onClick={onOpen} cursor='pointer' mt='20px' textAlign='center' fontSize='17px' color='#12284C' textDecoration={'underline 2px'} fontWeight={550} letterSpacing='2px' fontFamily='Montserrat Light,sans-serif'>VIEW PRODUCTS</Heading>
             </Box>

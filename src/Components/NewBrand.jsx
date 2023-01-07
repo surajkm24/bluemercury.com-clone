@@ -1,4 +1,5 @@
-import { Flex, Box, Image, Heading, Text, Show, Hide } from "@chakra-ui/react"
+import { Flex, Box, Image, Heading, Text } from "@chakra-ui/react"
+import logo from '../assets/newbrand.webp';
 
 export const NewBrand = () => {
 
@@ -8,8 +9,7 @@ export const NewBrand = () => {
             gap={{ base: "30px", md: "0px" }}>
             <Box width={{ base: "100%", md: '48%' }} cursor='pointer'>
                 <Image width='100%' height={{ md: '37vw' }} objectFit={'cover'}
-                    src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/zitsticka_coop_x650.jpg?
-                    v=1660762100' alt='' />
+                    src={logo} alt='' />
             </Box>
             <Box width={{ base: "100%", md: '48%' }} height='100%'
                 textAlign={{ base: "center", md: "left" }}>

@@ -5,7 +5,7 @@ import { SlideTwo } from "./SlideTwo";
 import { SlideThree } from "./SlideThree";
 
 export const MainCarousel = () => {
-    const [slide, setSlide] = useState(3);
+    const [slide, setSlide] = useState(1);
     const slideRef = useRef(null);
     const clickSlide = () => {
         clearInterval(slideRef.current);

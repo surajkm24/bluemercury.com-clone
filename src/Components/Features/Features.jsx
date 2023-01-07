@@ -1,10 +1,9 @@
 import { SearchIcon } from '@chakra-ui/icons';
-import { InputGroup, Input, InputRightElement, Flex, useDisclosure, Show, Hide, Spacer, Box, Text, Button, Icon, Tooltip, Popover, PopoverArrow, PopoverTrigger, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, Image } from '@chakra-ui/react';
-import { AiFillExclamationCircle, AiOutlineHeart } from 'react-icons/ai';
+import { Flex,  Box,  Button, Icon, Tooltip,  Image } from '@chakra-ui/react';
+import {  AiOutlineHeart } from 'react-icons/ai';
 import { CgProfile } from 'react-icons/cg';
 import { BiShoppingBag } from 'react-icons/bi';
-import { VscLocation } from 'react-icons/vsc';
-import { useState, useRef, useEffect, useContext } from 'react';
+import { useState, useRef } from 'react';
 import { useAuth } from '../../Context/AuthContext';
 import { Link } from 'react-router-dom';
 import { Shop } from './Shop';
@@ -14,6 +13,7 @@ import { BlueRewards } from './BlueRewards';
 import { RoutineReboot } from './RoutineReboot';
 import { Explore } from './Explore';
 import { Brands } from './Brands';
+import logo from '../../assets/bluemercurylogo.webp'
 
 export const Features = () => {
     const [count, setCount] = useState(1);
@@ -29,7 +29,7 @@ export const Features = () => {
             display={{ base: "none", lg: "flex" }}>
             <Box width='150px' display={showLogo ? 'block' : 'none'}>
                 <Link to='/'>
-                    <Image width='100%' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
+                    <Image width='100%' src={logo} alt='' />
                 </Link>
             </Box>
             <Flex justifyContent='center'

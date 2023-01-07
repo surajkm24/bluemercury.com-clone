@@ -7,7 +7,7 @@ import { VscLocation } from 'react-icons/vsc';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../Context/AuthContext';
 import { NavDrawer } from './NavDrawer';
-
+import logo from '../../assets/bluemercurylogo.webp'
 export const Navbar = () => {
     const { isAuth } = useAuth();
 
@@ -21,7 +21,7 @@ export const Navbar = () => {
             <NavDrawer />
             <Box width='150px' display={{ base: "flex", lg: 'none' }}>
                 <Link to='/'>
-                    <Image width='100%' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
+                    <Image width='100%' src={logo} alt='' />
                 </Link>
             </Box>
             <Flex>
@@ -71,7 +71,7 @@ export const Navbar = () => {
         </Flex>
         <Flex mt='0' justify='center' display={{ lg: "flex", base: "none" }}>
             <Link to='/'>
-                <img width='200px' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182' alt='' />
+                <img width='200px' src={logo} alt='' />
             </Link>
         </Flex>
         <Flex p='10px 20px 10px' display={{ base: "flex", md: "none" }}>

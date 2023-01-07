@@ -1,7 +1,10 @@
 import React from 'react'
 import { Box, Flex, Image, Text, Highlight } from '@chakra-ui/react';
+import logo1 from '../../assets/s11.webp';
+import logo2 from '../../assets/s12.webp';
+import logo3 from '../../assets/s13.webp';
 
-const imgs = ["https://cdn.shopify.com/s/files/1/0283/0185/2747/files/jan-resolutions-routines-hero-mob.jpg?v=1671727969&width=400", "https://cdn.shopify.com/s/files/1/0283/0185/2747/files/jan-resolutions-routines-hero-mob.jpg?v=1671727969&width=900", "https://cdn.shopify.com/s/files/1/0283/0185/2747/files/jan-resolutions-routine-hero-des_1600x.jpg?v=1671727968"]
+const imgs = [logo1, logo2, logo3]
 
 export const SlideOne = ({ slide }) => {
     return (
