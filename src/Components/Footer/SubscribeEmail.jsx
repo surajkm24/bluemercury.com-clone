@@ -1,12 +1,14 @@
 import { ArrowForwardIcon } from '@chakra-ui/icons';
-import { Box, Text, Input, Flex, Icon } from '@chakra-ui/react';
+import { Box, Text, Input, Flex, Icon, useToast } from '@chakra-ui/react';
 import { useState } from 'react';
 import { FaFacebookF, FaInstagram, FaPinterestP, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { handleSubscribe } from '../../Services/email.services';
 
 export const SubscribeEmail = () => {
     const [email, setEmail] = useState('');
+    const toast = useToast();
     const submitEmail = () => {
-
+        handleSubscribe(toast, email) ? setEmail("") : null;
     }
     return (
         <Box bg={{ base: "#12284c", lg: "white" }} color={{ base: "white", lg: "black" }}
@@ -29,8 +31,8 @@ export const SubscribeEmail = () => {
                 textDecoration='underline' display={{ base: "none", lg: "block" }}>
                 Privacy Practices
             </Text>
-            <Text fontSize='15px' display={{ base: 'flex', lg: "none" }} cursor='pointer' 
-            fontWeight='300' mt='15px'>
+            <Text fontSize='15px' display={{ base: 'flex', lg: "none" }} cursor='pointer'
+                fontWeight='300' mt='15px'>
                 By continuing, you agree to Bluemercury's &nbsp;
                 <Text fontSize='15px' cursor='pointer' fontWeight='300' textDecoration='underline'>
                     Privacy Practices
