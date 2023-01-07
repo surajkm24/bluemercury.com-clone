@@ -19,7 +19,7 @@ export const TreatMentAndSerums = () => {
                     <Text color='#12284C' fontSize='18px' mt='10px' fontWeight='300'>
                         {ele.content}
                     </Text>
-                    <Text width='fit-content' mx={{ base: "auto", md: "none" }} mt='10px'
+                    <Text width='fit-content' mx={{ base: "auto", md: "0px" }} mt='10px'
                         letterSpacing='2px' color='#12284C' fontWeight='500' fontSize='17px' borderBottom='2px solid #12284C'>
                         {ele.closing}
                     </Text>
