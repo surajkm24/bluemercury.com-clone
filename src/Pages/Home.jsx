@@ -8,6 +8,7 @@ import { Navbar } from '../Components/Navbar/Navbar'
 import { NewArrivals } from '../Components/NewArrivals'
 import { NewBrand } from '../Components/NewBrand'
 import { NewProductNest } from '../Components/NewProductNest'
+import { OffersAndServices } from '../Components/OffersAndServices'
 import { OffersText } from '../Components/OffersText'
 import { TreatMentAndSerums } from '../Components/TreatmentAndSerums'
 
@@ -24,6 +25,7 @@ const Home = () => {
             <TreatMentAndSerums />
             <GlowyMakeup />
             <NewBrand />
+            <OffersAndServices />
         </Box>
     )
 }

@@ -11,7 +11,6 @@ export const useNoOfCards = () => {
         else if (w >= 768) setTotal(3);
         else if (w >= 500) setTotal(2);
         else setTotal(1);
-        console.log(w)
     }
 
     useEffect(() => {
