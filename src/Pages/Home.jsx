@@ -6,6 +6,7 @@ import { GlowyMakeup } from '../Components/GlowyMakeup'
 import { MainCarousel } from '../Components/MainCarousel/MainCarousel'
 import { Navbar } from '../Components/Navbar/Navbar'
 import { NewArrivals } from '../Components/NewArrivals'
+import { NewBrand } from '../Components/NewBrand'
 import { NewProductNest } from '../Components/NewProductNest'
 import { OffersText } from '../Components/OffersText'
 import { TreatMentAndSerums } from '../Components/TreatmentAndSerums'
@@ -22,6 +23,7 @@ const Home = () => {
             <BestSellers />
             <TreatMentAndSerums />
             <GlowyMakeup />
+            <NewBrand />
         </Box>
     )
 }
