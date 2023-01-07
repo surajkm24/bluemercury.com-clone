@@ -7,6 +7,7 @@ import { Navbar } from '../Components/Navbar/Navbar'
 import { NewArrivals } from '../Components/NewArrivals'
 import { NewProductNest } from '../Components/NewProductNest'
 import { OffersText } from '../Components/OffersText'
+import { TreatMentAndSerums } from '../Components/TreatmentAndSerums'
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <NewArrivals />
             <NewProductNest />
             <BestSellers />
+            <TreatMentAndSerums />
         </Box>
     )
 }
