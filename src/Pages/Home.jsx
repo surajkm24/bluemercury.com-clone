@@ -1,5 +1,5 @@
 import { Box } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BestSellers } from '../Components/BestSellers'
 import { Features } from '../Components/Features/Features'
 import { Footer } from '../Components/Footer/Footer'
@@ -14,6 +14,9 @@ import { OffersText } from '../Components/OffersText'
 import { TreatMentAndSerums } from '../Components/TreatmentAndSerums'
 
 const Home = () => {
+    useEffect(() => {
+        (document.querySelector('title').innerText = 'Cosmetics, Skincare, Wellness and Spa | bluemercury')
+    }, [])
     return (
         <Box>
             <Navbar />
