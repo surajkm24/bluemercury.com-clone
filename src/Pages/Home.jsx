@@ -2,6 +2,7 @@ import { Box } from '@chakra-ui/react'
 import React from 'react'
 import { BestSellers } from '../Components/BestSellers'
 import { Features } from '../Components/Features/Features'
+import { Footer } from '../Components/Footer/Footer'
 import { GlowyMakeup } from '../Components/GlowyMakeup'
 import { MainCarousel } from '../Components/MainCarousel/MainCarousel'
 import { Navbar } from '../Components/Navbar/Navbar'
@@ -26,6 +27,7 @@ const Home = () => {
             <GlowyMakeup />
             <NewBrand />
             <OffersAndServices />
+            <Footer />
         </Box>
     )
 }
