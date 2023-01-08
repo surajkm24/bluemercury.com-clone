@@ -1,7 +1,7 @@
 import { Box, Heading, Image, Text } from '@chakra-ui/react';
 import { Carousel } from '@trendyol-js/react-carousel';
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
-import data from '../data/glowyMakeupData.json';
+import data from '../data/glowyMakeupData.js';
 import { useNoOfCards } from '../Hooks/useNoOfCards';
 
 export const GlowyMakeup = () => {
