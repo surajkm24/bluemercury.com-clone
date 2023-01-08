@@ -1,22 +1,23 @@
 # BlueMercury.com - Clone Project
 
-#### This project is about building a clone of **BlueMercury.com** website. **BlueMercury.com** is one of world's finest e-commerce website dealing in a various types of cosmetics and skin-care products. It also provides other services like in-store spa, massage, skin-care advice etc. Its an individual project completed in 4 days during Construct week in 4th unit in **Masai School**.
+#### This project is about building a clone of **BlueMercury.com** website's UI. **BlueMercury.com** is one of world's finest e-commerce website dealing in a various types of cosmetics and skin-care products. It also provides other services like in-store spa, massage, skin-care advice etc. Its an individual project completed in 4 days during Construct week in 4th unit in **Masai School**.
 ***
 ## Features Implemented:
 
 > - An attractive landing page listing various products and offers.
 > - Users can signup/login.
-> - Authentication is implemented using json-server.
+> - Authentication is implemented using localStoarge as the motive of this project was to simple build the UI.
 > - Responsive design.
 ***
 
-## Tech Stack:
+## Tech Stack & Tools:
 
 > - React
 > - ChakraUI
 > - CSS
 > - React-Router
-> - Json-Server
+> - LocalStorage
+> - Vite
 ***
 
 ## Deployment Link:
@@ -51,6 +52,7 @@ SignUp Page
 ## Created By:
 
 ### Suraj Kumar Mishra
+> - Portfolio: [surajkm24.github.io](https://surajkm24.github.io)
 > - GitHub: [surajkm24](https://github.com/surajkm2)
 > - Email: surajkm336796@gmail.com
 > - LinkedIn: [surajkm24](https://www.linkedin.com/in/surajkm24/)
