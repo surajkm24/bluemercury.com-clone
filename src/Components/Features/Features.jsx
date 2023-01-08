@@ -1,6 +1,6 @@
 import { SearchIcon } from '@chakra-ui/icons';
-import { Flex,  Box,  Button, Icon, Tooltip,  Image } from '@chakra-ui/react';
-import {  AiOutlineHeart } from 'react-icons/ai';
+import { Flex, Box, Button, Icon, Tooltip, Image, useToast } from '@chakra-ui/react';
+import { AiOutlineHeart } from 'react-icons/ai';
 import { CgProfile } from 'react-icons/cg';
 import { BiShoppingBag } from 'react-icons/bi';
 import { useState, useRef } from 'react';
@@ -14,11 +14,13 @@ import { RoutineReboot } from './RoutineReboot';
 import { Explore } from './Explore';
 import { Brands } from './Brands';
 import logo from '../../assets/bluemercurylogo.webp'
+import { logout } from '../../Services/auth.services';
 
 export const Features = () => {
     const [count, setCount] = useState(1);
     const [showLogo, setShowLogo] = useState(false);
-    const { isAuth } = useAuth();
+    const { isAuth, setIsAuth } = useAuth();
+    const toast = useToast();
     const myRef = useRef();
     window.onscroll = () => {
         myRef.current.offsetTop > 87 ? setShowLogo(true) : setShowLogo(false);
@@ -55,9 +57,9 @@ export const Features = () => {
                         <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white' display={{ base: "none", xl: "inline" }}></Button>
                     </Link>
                 </Tooltip>}
-                {isAuth.loggedin && <Tooltip label='Account'>
+                {isAuth.loggedin && <Tooltip label='Logout'>
                     <Link to='#'>
-                        <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white' display={{ base: "none", xl: "inline" }}></Button>
+                        <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="16px" variant='ghost' _hover='white' display={{ base: "none", xl: "inline" }} onClick={() => logout(setIsAuth, toast)}></Button>
                     </Link>
                 </Tooltip>}
                 <Tooltip label='Bag'>

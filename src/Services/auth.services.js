@@ -54,6 +54,16 @@ export const signupUser = ({ email, fName, lName, password, birthMonth }, toast,
     }
 }
 
+export const logout = (setIsAuth, toast) => {
+    localStorage.removeItem('yrucremeulbnekotUser');
+    toast({
+        title: "Logged out!",
+        status: "info",
+        isClosable: true,
+        duration: 2000
+    })
+    setIsAuth({ data: {}, loggedin: false });
+}
 export const validateUserData = (value) => {
     console.log(value);
     let temp = value;

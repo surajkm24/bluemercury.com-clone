@@ -1,5 +1,5 @@
 import { SearchIcon } from '@chakra-ui/icons';
-import { Input, Flex, Box, Text, Button, Icon, Tooltip, Image } from '@chakra-ui/react';
+import { Input, Flex, Box, Text, Button, Icon, Tooltip, Image, useToast } from '@chakra-ui/react';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { CgProfile } from 'react-icons/cg';
 import { BiShoppingBag } from 'react-icons/bi';
@@ -8,8 +8,10 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../../Context/AuthContext';
 import { NavDrawer } from './NavDrawer';
 import logo from '../../assets/bluemercurylogo.webp'
+import { logout } from '../../Services/auth.services';
 export const Navbar = () => {
-    const { isAuth } = useAuth();
+    const { isAuth, setIsAuth } = useAuth();
+    const toast = useToast()
 
     return <>
         <Flex bg='white' align='center' justify='space-between' py={{ base: "5px", lg: "0px" }}
@@ -50,12 +52,13 @@ export const Navbar = () => {
                         </Button>
                     </Link>
                 </Tooltip>}
-                {isAuth.loggedin && <Tooltip label='Account'>
+                {isAuth.loggedin && <Tooltip label='Logout'>
                     <Link to='#'>
                         <Button leftIcon={<Icon as={CgProfile} boxSize='25px' />} letterSpacing='1px' color='#12284c' fontSize="12px" variant='ghost' _hover='white'
-                            display={{ base: "none", md: "flex" }}>
+                            display={{ base: "none", md: "flex" }}
+                            onClick={() => logout(setIsAuth, toast)}>
                             <Text display={{ base: "none", lg: "flex" }}>
-                                ACCOUNT
+                                LOGOUT
                             </Text>
                         </Button>
                     </Link>
