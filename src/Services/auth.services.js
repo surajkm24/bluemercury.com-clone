@@ -53,3 +53,10 @@ export const signupUser = ({ email, fName, lName, password, birthMonth }, toast,
         }, 1500)
     }
 }
+
+export const validateUserData = (value) => {
+    console.log(value);
+    let temp = value;
+    // let temp = value.split('').filer((ele) => ele !== ' ').join('');
+    return temp;
+}

@@ -12,6 +12,13 @@ export const Signup = () => {
     const { setIsAuth, isAuth } = useAuth();
     const toast = useToast();
 
+    const handleChange = (event) => {
+        let { value, name } = event.target;
+        value = value.trim();
+        console.log(name, value)
+        setFormData({ ...formData, [name]: value })
+    }
+
     const handleSignup = async (e) => {
         e.preventDefault();
         signupUser(formData, toast, setIsAuth)
@@ -36,33 +43,26 @@ export const Signup = () => {
             <form onSubmit={handleSignup}>
                 <Box border='1px solid black' mt='20px' p='8px 15px' _hover={{ borderColor: "blue" }}>
                     <Input color='gray' variant='unstyled' type='email' placeholder='Email*'
-                        borderRadius='0px' required onChange={(e) => setFormData({
-                            ...formData,
-                            email: e.target.value
-                        })} />
+                        value={formData.email} borderRadius='0px' required onChange={handleChange} name='email' />
                 </Box>
                 <Box border='1px solid black' mt='15px' p='8px 15px' _hover={{ borderColor: "blue" }}>
                     <Input color='gray' variant='unstyled' type='text' placeholder='First Name*'
-                        borderRadius='0px' required onChange={(e) => setFormData({
-                            ...formData,
-                            fName: e.target.value
-                        })} />
+                        name='fName' value={formData.fName} borderRadius='0px' required
+                        onChange={handleChange} />
                 </Box>
                 <Box border='1px solid black' mt='15px' p='8px 15px' _hover={{ borderColor: "blue" }}>
                     <Input color='gray' variant='unstyled' type='text' placeholder='Last Name*'
-                        borderRadius='0px' required onChange={(e) => setFormData({
-                            ...formData,
-                            lName: e.target.value
-                        })} />
+                        name='lName' value={formData.lName}
+                        borderRadius='0px' required onChange={handleChange} />
                 </Box>
                 <Box border='1px solid black' mt='15px' p='8px 15px' _hover={{ borderColor: "blue" }}>
                     <Input color='gray' variant='unstyled' type='password' minLength={8}
-                        placeholder='Password*' borderRadius='0px' required onChange={(e) => setFormData
-                            ({ ...formData, password: e.target.value })} />
+                        name='password' value={formData.password}
+                        placeholder='Password*' borderRadius='0px' required onChange={handleChange} />
                 </Box>
                 <Select display={showBM ? 'block' : "none"} variant='outline' borderRadius='0px'
                     borderColor='black' mt='15px' placeholder='Birthday Month' color='gray'
-                    onChange={(e) => setFormData({ ...formData, birthMonth: e.target.value })}>
+                    name='birthMonth' value={formData.birthMonth} onChange={handleChange}>
                     <option value='January'>January</option>
                     <option value='February'>February</option>
                     <option value='March'>March</option>

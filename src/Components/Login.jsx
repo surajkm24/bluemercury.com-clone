@@ -10,6 +10,11 @@ export const Login = () => {
     const toast = useToast();
     const { isAuth, setIsAuth } = useAuth();
 
+    const handleChange = (event) => {
+        let { value, name } = event.target;
+        value = value.trim();
+        setFormData({ ...formData, [name]: value })
+    }
     const handleLogin = (e) => {
         e.preventDefault();
         loginUser(formData, toast, setIsAuth);
@@ -32,14 +37,12 @@ export const Login = () => {
             </Text>
             <form onSubmit={handleLogin}>
                 <Box border='1px solid black' mt='20px' p='7px 14px' _hover={{ borderColor: "blue" }}>
-                    <Input variant='unstyled' placeholder='Email' borderRadius='0px'
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })} required />
+                    <Input variant='unstyled' placeholder='Email' borderRadius='0px' value={formData.email} onChange={handleChange} required name='email' />
                 </Box>
                 <Box mt='15px' p=' 7px 14px' display='flex' border='1px solid black'
                     _hover={{ borderColor: "blue" }}>
                     <Input placeholder='Password' variant='unstyled' type='password' borderRadius='0px'
-                        required
-                        onChange={(e) => setFormData({ ...formData, password: e.target.value })} />
+                        value={formData.password} required name='password' onChange={handleChange} />
                     <Text cursor='pointer' textDecoration='underline' fontSize='14px'
                         whiteSpace='nowrap' color='gray'>Forgot Password?</Text>
                 </Box>
