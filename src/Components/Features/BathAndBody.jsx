@@ -1,4 +1,5 @@
-import {Flex, Box, Text} from '@chakra-ui/react';
+import { Flex, Box, Text } from '@chakra-ui/react';
+import logo from '../../assets/features/shop4.avif';
 
 export const BathAndBody = () => {
 
@@ -37,7 +38,7 @@ export const BathAndBody = () => {
                 <Text color='#12284c' cursor='pointer'>WelleCo</Text>
             </Flex>
             <Box cursor='pointer'>
-                <img src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/beauty_alfresco_bath_and_body_303x303.jpg?v=1651860525' alt='Blue Mercury'/>
+                <img src={logo} alt='Blue Mercury' />
                 <Text color='#12284c' fontFamily='sans-serif' mt='5px'>Summer Body Ready</Text>
                 <Text color='#122b4c' opacity='0.8' fontSize='14px'>Products that reduce cellulite, stop bloating, and more!</Text>
             </Box>

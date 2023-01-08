@@ -1,4 +1,5 @@
-import {Flex, Box, Text} from '@chakra-ui/react';
+import { Flex, Box, Text } from '@chakra-ui/react';
+import logo from '../../assets/features/shop10.avif';
 
 export const Gifts = () => {
 
@@ -23,7 +24,7 @@ export const Gifts = () => {
                 <Text color='#12284c' cursor='pointer'>$100 and Over</Text>
             </Flex>
             <Box cursor='pointer'>
-                <img src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/Wedding_Season_1x1_Blue_Mercury_2208_Alford_7031_303x303.jpg?v=1660140149' alt='Blue Mercury'/>
+                <img src={logo} alt='Blue Mercury' />
                 <Text color='#12284c' fontFamily='sans-serif' mt='5px'>Wedding Party Gifts</Text>
             </Box>
         </>)

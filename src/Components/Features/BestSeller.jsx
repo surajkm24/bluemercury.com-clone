@@ -1,4 +1,5 @@
-import {Flex, Box, Text} from '@chakra-ui/react';
+import { Flex, Box, Text } from '@chakra-ui/react';
+import logo from '../../assets/features/shop11.avif';
 
 export const BestSeller = () => {
 
@@ -30,7 +31,7 @@ export const BestSeller = () => {
                 <Text color='#12284c' cursor='pointer'>Trish McEvoy</Text>
             </Flex>
             <Box cursor='pointer'>
-                <img src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/hydraboost_cream_303x303.jpg?v=1656523344' alt='Blue Mercury'/>
+                <img src={logo} alt='Blue Mercury' />
                 <Text color='#12284c' fontFamily='sans-serif' mt='5px'>M-61 Hydraboost® Cream</Text>
                 <Text color='#122b4c' opacity='0.8' fontSize='14px'>Our best-selling face cream with peptides, vitamin B5 & tamarind</Text>
             </Box>

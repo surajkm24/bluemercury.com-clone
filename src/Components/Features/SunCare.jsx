@@ -1,4 +1,5 @@
-import {Flex, Box, Text} from '@chakra-ui/react';
+import { Flex, Box, Text } from '@chakra-ui/react';
+import logo from '../../assets/features/shop8.avif';
 
 export const SunCare = () => {
 
@@ -25,7 +26,7 @@ export const SunCare = () => {
                 <Text color='#12284c' cursor='pointer'>TanTowel</Text>
             </Flex>
             <Box cursor='pointer'>
-                <img src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/elta_md_nav_303x303.jpg?v=1656446190' alt='Blue Mercury'/>
+                <img src={logo} alt='Blue Mercury' />
                 <Text color='#12284c' fontFamily='sans-serif' mt='5px'>New to Bluemercury: EltaMD</Text>
                 <Text color='#122b4c' opacity='0.8' fontSize='14px'>Shop the cult-favourite sunscreen brand!</Text>
             </Box>

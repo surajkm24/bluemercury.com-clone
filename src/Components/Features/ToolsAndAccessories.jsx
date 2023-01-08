@@ -1,4 +1,5 @@
-import {Flex, Box, Text} from '@chakra-ui/react';
+import { Flex, Box, Text } from '@chakra-ui/react';
+import logo from '../../assets/features/shop6.avif';
 
 export const ToolsAndAccessories = () => {
 
@@ -31,7 +32,7 @@ export const ToolsAndAccessories = () => {
                 <Text color='#12284c' cursor='pointer'>The Loght Salon</Text>
             </Flex>
             <Box cursor='pointer'>
-                <img src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/wellness_nav_BAL_303x303.jpg?v=1651871115' alt='Blue Mercury'/>
+                <img src={logo} alt='Blue Mercury' />
                 <Text color='#12284c' fontFamily='sans-serif' mt='5px'>Summer Self-Care Tools</Text>
                 <Text color='#122b4c' opacity='0.8' fontSize='14px'>Add these tools to your wellness routine!</Text>
             </Box>

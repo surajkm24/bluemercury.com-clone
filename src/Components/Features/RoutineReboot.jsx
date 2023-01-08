@@ -1,4 +1,6 @@
 import { Popover, PopoverTrigger, PopoverContent, PopoverBody, Flex, Box, Text } from '@chakra-ui/react';
+import logo1 from '../../assets/features/rr1.avif';
+import logo2 from '../../assets/features/rr2.avif';
 
 export const RoutineReboot = () => {
     return (
@@ -11,11 +13,11 @@ export const RoutineReboot = () => {
                 <PopoverBody >
                     <Flex justifyContent='center' my='15px'>
                         <Box pr='35px' cursor='pointer'>
-                            <img src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/routine-reboot_303x303.jpg?v=1659115615' alt='Routine Reboot' />
+                            <img src={logo1} alt='Routine Reboot' />
                             <Text color='#12284c' fontFamily='sans-serif' mt='5px'>Shop All Routines</Text>
                         </Box>
                         <Box cursor='pointer' >
-                            <img src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/extend_your_summer_glow_2_303x303.jpg?v=1659102162' alt='Routine Reboot' />
+                            <img src={logo2} alt='Routine Reboot' />
                             <Text color='#12284c' fontFamily='sans-serif' mt='5px'>The "Extend Your Summer Glow" Routine</Text>
                             <Text color='#122b4c' opacity='0.8' fontSize='14px'>Ward off dullness and boost your glow from head to toe</Text>
                         </Box>

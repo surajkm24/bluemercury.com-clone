@@ -1,4 +1,5 @@
 import { Popover, PopoverTrigger, PopoverContent, PopoverBody, Flex, Box, Text } from '@chakra-ui/react';
+import logo from '../../assets/features/bluerewards.avif';
 
 export const BlueRewards = () => {
     return (
@@ -19,7 +20,7 @@ export const BlueRewards = () => {
                             <Text color='#12284c' cursor='pointer'>Details + Preferences</Text>
                         </Flex>
                         <Box cursor='pointer'>
-                            <img src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluerewards_2_303x303.jpg?v=1635345372' alt='Blue Rewards' />
+                            <img src={logo} alt='Blue Rewards' />
                             <Text color='#12284c' fontFamily='sans-serif' mt='5px'>Earn $10 for every $250</Text>
                             <Text color='#122b4c' opacity='0.8' fontSize='14px'>Free to Join! Learn More &gt; </Text>
                         </Box>

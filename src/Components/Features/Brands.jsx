@@ -1,5 +1,6 @@
 import { Popover, PopoverTrigger, PopoverContent, PopoverBody, Flex, Text, Box } from '@chakra-ui/react';
 import { bestsellers, newatblue } from '../../data/featuresData';
+import logo from '../../assets/features/brand.avif';
 
 export const Brands = () => {
     return (
@@ -30,7 +31,7 @@ export const Brands = () => {
                             ))}
                         </Flex>
                         <Box cursor='pointer'>
-                            <img src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/elta_md_nav_303x303.jpg?v=1656446190' alt='Blue Mercury' />
+                            <img src={logo} alt='Blue Mercury' />
                             <Text color='#12284c' fontFamily='sans-serif' mt='5px'>
                                 New to Buemercury: EltaMD
                             </Text>

@@ -1,4 +1,5 @@
-import {Flex, Box, Text} from '@chakra-ui/react';
+import { Flex, Box, Text } from '@chakra-ui/react';
+import logo from '../../assets/features/shop2.avif';
 
 export const Makeup = () => {
     return (
@@ -33,7 +34,7 @@ export const Makeup = () => {
                 <Text color='#12284c' cursor='pointer'>Trish McEvoy</Text>
             </Flex>
             <Box cursor='pointer'>
-                <img src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/lune_navigation_303x303.jpg?v=1660140478' alt='Blue Mercury'/>
+                <img src={logo} alt='Blue Mercury' />
                 <Text color='#12284c' fontFamily='sans-serif' mt='5px'>Lune+Aster CC Cream with SPF 50</Text>
                 <Text color='#122b4c' opacity='0.8' fontSize='14px'>Evens skin tone and creates a dewy glow</Text>
             </Box>

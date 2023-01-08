@@ -1,4 +1,6 @@
 import { Popover, PopoverBody, PopoverTrigger, PopoverContent, Box, Flex, Text } from '@chakra-ui/react';
+import logo1 from '../../assets/features/exp1.avif';
+import logo2 from '../../assets/features/exp2.avif';
 
 export const Explore = () => {
     return (
@@ -23,12 +25,12 @@ export const Explore = () => {
                             <Text color='#12284c' cursor='pointer' letterSpacing='1px' >MORE</Text>
                         </Flex>
                         <Box cursor='pointer'>
-                            <img src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/Wedding_Season_1x1_Blue_Mercury_2208_Alford_7031_303x303.jpg?v=1660140149' alt='Blue Mercury' />
+                            <img src={logo1} />
                             <Text color='#12284c' fontFamily='sans-serif' mt='5px'>Wedding Season Essentials</Text>
                             <Text color='#122b4c' opacity='0.8' fontSize='14px'>Must-have products for the bridal party and guests!</Text>
                         </Box>
                         <Box cursor='pointer'>
-                            <img src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/routine-reboot_303x303.jpg?v=1659115615' alt='Blue Mercury' />
+                            <img src={logo2} alt='Blue Mercury' />
                             <Text color='#12284c' fontFamily='sans-serif' mt='5px'>Routine Reboot</Text>
                             <Text color='#122b4c' opacity='0.8' fontSize='14px'>Explore all beauty routines</Text>
                         </Box>

@@ -1,5 +1,7 @@
 import { Popover, PopoverTrigger, Text, PopoverContent, PopoverBody, Flex, Box } from '@chakra-ui/react';
 import { newCategories } from '../../data/featuresData';
+import logo1 from '../../assets/features/new1.avif';
+import logo2 from '../../assets/features/new2.avif';
 
 export const New = () => {
     return (
@@ -20,12 +22,12 @@ export const New = () => {
                             ))}
                         </Flex>
                         <Box cursor='pointer'>
-                            <img src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/zitsticka_navigation_303x303.jpg?v=1659549528' alt='Blue Mercury' />
+                            <img src={logo1} alt='Blue Mercury' />
                             <Text color='#12284c' fontFamily='sans-serif' mt='5px'>New Brand Alert: ZitSticka</Text>
                             <Text color='#122b4c' opacity='0.8' fontSize='14px'>Treat and prevent all kinds of breakouts</Text>
                         </Box>
                         <Box cursor='pointer'>
-                            <img src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/summer_spectacular_navigation_303x303.jpg?v=1658775534' alt='Blue Mercury' />
+                            <img src={logo2} alt='Blue Mercury' />
                             <Text color='#12284c' fontFamily='sans-serif' mt='5px'>The Summer Beauty Spectacular</Text>
                             <Text color='#122b4c' opacity='0.8' fontSize='14px'>$780+ worth of must-haves for less than $400!</Text>
                         </Box>
