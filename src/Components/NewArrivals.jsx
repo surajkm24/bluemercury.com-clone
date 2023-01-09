@@ -14,7 +14,8 @@ export const NewArrivals = () => {
             <Box w={{ base: "90vw", md: "95vw", lg: "90vw" }} m='50px auto 0px'>
                 <Carousel show={total} responsive={true} slide={total} transition={0.5} swiping={true} useArrowKeys={true} rightArrow={<ChevronRightIcon mt='10vw' boxSize='70px' cursor='pointer' />} leftArrow={<ChevronLeftIcon mt='10vw' boxSize='70px' cursor='pointer' />}>
                     {data.map((item) => <Box key={item['ProductCard__ImageWrapper href']} textAlign='center'>
-                        <Image width={{base:"80%",lg:'90%'}} src={item['ProductCard__Image src']} alt='' />
+                        <Image width={{ base: "80%", lg: '90%' }} src={item['ProductCard__Image src']}
+                            alt='' mx='auto' />
                         <Text color='#12284C' fontWeight={500} fontSize='15px' letterSpacing='1px'>{item['ProductCard__Brand'].toUpperCase()}</Text>
                         <Text color='#12284C' width={{ base: "90%", md: '80%' }} margin='auto' fontSize='15px'>{item['ProductCard__Title']}</Text>
                         <Text color='#12284C'>{item["ProductCard__Price"]}</Text>
