@@ -30,7 +30,7 @@ export const MainCarousel = () => {
         }
     }, [])
     return (
-        <Skeleton h='30vw' isLoaded={!loading}>
+        <Skeleton minH={{ base: "80vw", md: "250px",lg:"300px" }} isLoaded={!loading}>
             <Box className='carousel' >
                 <SlideOne slide={slide} />
                 <SlideTwo slide={slide} />
